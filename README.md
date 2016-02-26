@@ -6,6 +6,15 @@ A Beautiful layout and easy to navigate interface let you browse all your favori
 Update 1:
 Development Starts in Few Days{In Planning Stage--> Ready for Development}
 
+Update 2:
+Development Started.
+
+Update 3:
+Website Launched.
+  www.akshaythalakoti.com
+
+
+
 
 
 
