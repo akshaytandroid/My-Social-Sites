@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/akshaytandroid/My-Social-Sites.svg?branch=master)](https://travis-ci.org/akshaytandroid/My-Social-Sites)
+
 # My-Social-Sites
 My Social Sites- Access all your favorite websites on a Single App. A very Clean and Materialistic design provides you access all the top and useful websites at a single click.
 
