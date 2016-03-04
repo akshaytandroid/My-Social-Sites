@@ -1,10 +1,13 @@
 package com.example.akshay.mysocialsites;
 
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.Typeface;
 import android.net.Uri;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.KeyEvent;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.Button;
@@ -32,15 +35,12 @@ public class MainActivity extends AppCompatActivity {
         textView.setTypeface(typeface);
 
         b1 = (Button) findViewById(R.id.button);
-
-
         b1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 intentSending();
             }
         });
-
 
     }
 
@@ -55,5 +55,36 @@ public class MainActivity extends AppCompatActivity {
         startActivity(webUrlIntent);
     }
 
+
+    DialogInterface.OnClickListener dialogClickListener = new DialogInterface.OnClickListener() {
+        @Override
+        public void onClick(DialogInterface dialog, int which) {
+            switch (which){
+                case DialogInterface.BUTTON_POSITIVE:
+                    //Yes button clicked
+                   finish();
+
+                case DialogInterface.BUTTON_NEGATIVE:
+                    //No button clicked
+                    dialog.dismiss();
+            }
+        }
+
+    };
+
+    @Override
+    public boolean onKeyDown(int keyCode, KeyEvent event) {
+
+        switch(keyCode)
+        {
+            case KeyEvent.KEYCODE_BACK:
+                AlertDialog.Builder ab = new AlertDialog.Builder(MainActivity.this);
+                ab.setMessage("Close the Application?").setPositiveButton("Yes", dialogClickListener)
+                        .setNegativeButton("No", dialogClickListener).show();
+                break;
+        }
+
+        return super.onKeyDown(keyCode, event);
+    }
 
 }

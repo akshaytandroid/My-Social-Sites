@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+   android:layout_centerInParent="true">
+
+
+    <com.example.akshay.mysocialsites.customFontTextView
+        android:id="@+id/exitConfirmation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:text="Are you sure to Exit ? "
+        android:textSize="20dp"/>
+    <LinearLayout
+        android:layout_below="@+id/exitConfirmation"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:orientation="horizontal"
+        android:layout_marginTop="20dp">
+
+        <Button
+            android:id="@+id/btnYes"
+            android:layout_width="145dp"
+            android:layout_height="wrap_content"
+            android:text="Yes"
+            android:fontFamily=""
+            android:background="#00CC66"
+            android:textColor="#fff"
+            android:textStyle="bold"
+            android:layout_margin="5dp"/>
+
+        <Button
+            android:id="@+id/btnNo"
+            android:layout_width="145dp"
+            android:layout_height="wrap_content"
+            android:text="No"
+            android:background="#FF3333"
+            android:textColor="#fff"
+            android:textStyle="bold"
+            android:layout_margin="5dp" />
+    </LinearLayout>
+
+
+
+</RelativeLayout>
